@@ -1,0 +1,22 @@
+2022-06-06 15:27:08.310  INFO 58213 --- [main] com.iobuiders.bank.BankApplicationTests  : Starting BankApplicationTests using Java 11.0.15 on francoispoirier-ThinkPad-E15-Gen-2 with PID 58213 (started by francoispoirier in /home/francoispoirier/workspace-fpo/bank)
+2022-06-06 15:27:08.312  INFO 58213 --- [main] com.iobuiders.bank.BankApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2022-06-06 15:27:08.960  INFO 58213 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-06 15:27:08.999  INFO 58213 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2022-06-06 15:27:09.410  INFO 58213 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-06 15:27:09.497  INFO 58213 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-06 15:27:09.626  INFO 58213 --- [main] liquibase.database                       : Set default schema name to public
+2022-06-06 15:27:09.707  INFO 58213 --- [main] liquibase.lockservice                    : Successfully acquired change log lock
+2022-06-06 15:27:09.892  INFO 58213 --- [main] liquibase.changelog                      : Reading from public.databasechangelog
+2022-06-06 15:27:09.934  INFO 58213 --- [main] liquibase.lockservice                    : Successfully released change log lock
+2022-06-06 15:27:10.029  INFO 58213 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-06 15:27:10.061  INFO 58213 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-06-06 15:27:10.151  INFO 58213 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-06 15:27:10.220  INFO 58213 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-06-06 15:27:10.569  INFO 58213 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-06 15:27:10.575  INFO 58213 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-06 15:27:11.152  WARN 58213 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-06 15:27:12.277  INFO 58213 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2022-06-06 15:27:12.341  INFO 58213 --- [main] com.iobuiders.bank.BankApplicationTests  : Started BankApplicationTests in 4.275 seconds (JVM running for 4.943)
+2022-06-06 15:27:12.711  INFO 58213 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-06-06 15:27:12.713  INFO 58213 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-06-06 15:27:12.717  INFO 58213 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
