@@ -1,8 +1,4 @@
 
-logging:
-  file:
-    name: ./log/bank-app.log
-
 springdoc:
   api-docs:
     path: /bank-openapi
