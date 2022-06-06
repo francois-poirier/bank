@@ -1,0 +1,156 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Bank",
+		"_postman_id": "716d9ea5-02d2-430e-2071-4037676cde54",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AddUser",
+			"request": {
+				"url": "http://localhost:8080/api/v1/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\n\t\"email\": \"fpoirier2003@gmail.com\",\n    \"firstName\": \"francois3\",\n    \"lastName\": \"poirier3\",\n    \"username\": \"fpoirier3\",\n    \"password\": \"123453%\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetWallets",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetWallet",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets/4241a0d5-60d2-4ced-9ed8-4f47362bc18a",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets/4241a0d5-60d2-4ced-9ed8-4f47362bc18a/deposit",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 2000.0\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets/4241a0d5-60d2-4ced-9ed8-4f47362bc18a/withdraw",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 1000.0\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet History",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/api/v1/transactions?walletId=4241a0d5-60d2-4ced-9ed8-4f47362bc18a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "walletId",
+							"value": "4241a0d5-60d2-4ced-9ed8-4f47362bc18a",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets/transfer",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"amount\": 1000.0,\n\t\"walletSrc\": \"4241a0d5-60d2-4ced-9ed8-4f47362bc18a\",\n\t\"walletTarget\": \"be7a793d-6225-45b0-88a1-b21f73b96836\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetBalance",
+			"request": {
+				"url": "http://localhost:8080/api/v1/wallets/4241a0d5-60d2-4ced-9ed8-4f47362bc18a",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

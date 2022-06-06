@@ -1,0 +1,58 @@
+databaseChangeLog:
+  - changeSet:
+      id: 03_create_wallet_table
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: wallet
+      changes:
+        - createTable:
+            schemaName: bank
+            tableName: wallet
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKeyName: wallet_pkey
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: fk_wallet_user
+                    references: bank.user(id)
+                    nullable: false
+              - column:
+                  name: balance
+                  type: NUMERIC(20, 2)
+                  constraints:
+                    nullable: false
+
+
+  - changeSet:
+      id: 04_add_user_foreignkey_constraint_in_wallet
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: wallet
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: user_id
+            baseTableName: wallet
+            baseTableSchemaName: bank
+            constraintName: fk_wallet_user
+            deferrable: true
+            initiallyDeferred: true
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: user
+            referencedTableSchemaName: bank

@@ -1,0 +1,55 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01_bank_create_schema
+      author: fpoirier
+      changes:
+        - sql:
+            sql: CREATE SCHEMA IF NOT EXISTS bank
+
+  - changeSet:
+      id: 02_create_user_table
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: user
+      changes:
+        - createTable:
+            schemaName: bank
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKeyName: user_pkey
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: first_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true

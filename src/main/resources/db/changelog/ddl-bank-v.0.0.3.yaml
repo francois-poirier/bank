@@ -1,0 +1,92 @@
+databaseChangeLog:
+  - changeSet:
+      id: 05_create_transaction_table
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: transaction
+      changes:
+        - createTable:
+            schemaName: bank
+            tableName: transaction
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKeyName: transaction_pkey
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: source_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: fk_transaction_wallet_src
+                    references: bank.wallet(id)
+                    nullable: false
+              - column:
+                  name: target_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: fk_transaction_wallet_tgt
+                    references: bank.wallet(id)
+                    nullable: false
+              - column:
+                  name: amount
+                  type: NUMERIC(20, 2)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: type
+                  type: VARCHAR(10)
+                  constraints:
+                    nullable: false
+
+  - changeSet:
+      id: 06_add_src_foreignkey_constraint_in_transaction
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: transaction
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: source_id
+            baseTableName: transaction
+            baseTableSchemaName: bank
+            constraintName: fk_transaction_wallet_src
+            deferrable: true
+            initiallyDeferred: true
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: wallet
+            referencedTableSchemaName: bank
+
+  - changeSet:
+      id: 07_add_tgt_foreignkey_constraint_in_transaction
+      author: fpoirier
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              schemaName: bank
+              tableName: transaction
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: target_id
+            baseTableName: transaction
+            baseTableSchemaName: bank
+            constraintName: fk_transaction_wallet_tgt
+            deferrable: true
+            initiallyDeferred: true
+            onDelete: CASCADE
+            onUpdate: RESTRICT
+            referencedColumnNames: id
+            referencedTableName: wallet
+            referencedTableSchemaName: bank
