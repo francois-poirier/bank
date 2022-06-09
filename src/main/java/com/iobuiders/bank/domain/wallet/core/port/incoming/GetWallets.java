@@ -1,6 +1,6 @@
 package com.iobuiders.bank.domain.wallet.core.port.incoming;
 
-import com.iobuiders.bank.domain.wallet.application.response.WalletResponse;
+import com.iobuiders.bank.domain.wallet.application.query.WalletResponse;
 
 import java.util.List;
 

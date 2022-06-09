@@ -1,6 +1,6 @@
 package com.iobuiders.bank.domain.wallet.core;
 
-import com.iobuiders.bank.domain.wallet.application.response.TransactionResponse;
+import com.iobuiders.bank.domain.wallet.application.query.TransactionResponse;
 import com.iobuiders.bank.domain.wallet.core.model.Transaction;
 import com.iobuiders.bank.domain.wallet.core.model.TransactionIdentifier;
 import com.iobuiders.bank.domain.wallet.core.port.incoming.AddNewTransaction;

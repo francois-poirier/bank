@@ -1,7 +1,7 @@
 package com.iobuiders.bank.domain.wallet.core;
 
 import com.iobuiders.bank.domain.user.core.model.User;
-import com.iobuiders.bank.domain.wallet.application.response.WalletResponse;
+import com.iobuiders.bank.domain.wallet.application.query.WalletResponse;
 import com.iobuiders.bank.domain.wallet.core.event.TransactionPublisher;
 import com.iobuiders.bank.domain.wallet.core.model.TransactionEvent;
 import com.iobuiders.bank.domain.wallet.core.model.TransactionType;

@@ -1,4 +1,4 @@
-package com.iobuiders.bank.domain.user.core.model;
+package com.iobuiders.bank.domain.user.application.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

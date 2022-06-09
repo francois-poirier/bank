@@ -1,9 +1,9 @@
 package com.iobuiders.bank.domain.wallet.application;
 
-import com.iobuiders.bank.domain.wallet.application.response.WalletResponse;
-import com.iobuiders.bank.domain.wallet.core.model.DepositCommand;
-import com.iobuiders.bank.domain.wallet.core.model.TransferCommand;
-import com.iobuiders.bank.domain.wallet.core.model.WithdrawCommand;
+import com.iobuiders.bank.domain.wallet.application.query.WalletResponse;
+import com.iobuiders.bank.domain.wallet.application.command.DepositCommand;
+import com.iobuiders.bank.domain.wallet.application.command.TransferCommand;
+import com.iobuiders.bank.domain.wallet.application.command.WithdrawCommand;
 import com.iobuiders.bank.domain.wallet.core.port.incoming.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

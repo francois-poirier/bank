@@ -1,7 +1,7 @@
 package com.iobuiders.bank.domain.user.core;
 
 import com.iobuiders.bank.domain.user.core.event.UserPublisher;
-import com.iobuiders.bank.domain.user.core.model.AddUserCommand;
+import com.iobuiders.bank.domain.user.application.command.AddUserCommand;
 import com.iobuiders.bank.domain.user.core.model.EmailAddress;
 import com.iobuiders.bank.domain.user.core.model.User;
 import com.iobuiders.bank.domain.user.core.port.outgoing.UpdateUserPort;

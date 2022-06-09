@@ -1,4 +1,4 @@
-package com.iobuiders.bank.domain.wallet.application.response;
+package com.iobuiders.bank.domain.wallet.application.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

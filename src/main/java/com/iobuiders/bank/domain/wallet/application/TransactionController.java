@@ -1,6 +1,6 @@
 package com.iobuiders.bank.domain.wallet.application;
 
-import com.iobuiders.bank.domain.wallet.application.response.TransactionResponse;
+import com.iobuiders.bank.domain.wallet.application.query.TransactionResponse;
 import com.iobuiders.bank.domain.wallet.core.port.incoming.GetTransactions;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

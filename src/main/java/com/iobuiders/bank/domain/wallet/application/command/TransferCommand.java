@@ -1,4 +1,4 @@
-package com.iobuiders.bank.domain.wallet.core.model;
+package com.iobuiders.bank.domain.wallet.application.command;
 
 import lombok.*;
 

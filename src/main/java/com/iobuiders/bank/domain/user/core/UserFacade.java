@@ -1,5 +1,6 @@
 package com.iobuiders.bank.domain.user.core;
 
+import com.iobuiders.bank.domain.user.application.command.AddUserCommand;
 import com.iobuiders.bank.domain.user.core.event.UserPublisher;
 import com.iobuiders.bank.domain.user.core.model.*;
 import com.iobuiders.bank.domain.user.core.port.incoming.AddNewUser;

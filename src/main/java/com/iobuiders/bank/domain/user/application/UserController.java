@@ -1,7 +1,7 @@
 package com.iobuiders.bank.domain.user.application;
 
 import com.iobuiders.bank.domain.user.core.port.incoming.AddNewUser;
-import com.iobuiders.bank.domain.user.core.model.AddUserCommand;
+import com.iobuiders.bank.domain.user.application.command.AddUserCommand;
 import com.iobuiders.bank.domain.user.core.model.UserIdentifier;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
