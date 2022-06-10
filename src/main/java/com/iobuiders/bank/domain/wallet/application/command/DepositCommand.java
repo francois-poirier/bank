@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotEmpty;
 import java.math.BigDecimal;
 
 @Getter
@@ -13,5 +14,6 @@ import java.math.BigDecimal;
 @Builder
 public class DepositCommand {
     @Getter
+    @NotEmpty
     BigDecimal amount;
 }

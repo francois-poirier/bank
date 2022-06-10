@@ -8,3 +8,5 @@ In order for this approach to work, of course, you need to have Docker installed
 * Application will be running on: http://localhost:8080
 * To stop it you can open other terminal in the same directory, and then run the following command:<br/>
   ```docker-compose -f docker/docker-compose.yml down```
+
+* Open Api Doc to http://localhost:8080/swagger-ui/index.html
